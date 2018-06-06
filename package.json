@@ -1,0 +1,35 @@
+{
+  "name": "create-art",
+  "version": "1.0.0",
+  "description": "A small scaffolding tool for ThreeJS projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "create-artboard:default": "node scripts/generateDefaultArtboard.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wlto/create-art.git"
+  },
+  "keywords": [
+    "scaffold",
+    "art",
+    "frontend",
+    "create"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wlto/create-art/issues"
+  },
+  "homepage": "https://github.com/wlto/create-art#readme",
+  "dependencies": {
+    "three": "^0.93.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-2": "^6.24.1"
+  }
+}
