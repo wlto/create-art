@@ -20,9 +20,14 @@ if (typeof artboardName != 'string') {
   const outputSassDir = 'assets';
   // build once
   buildSass(artboardPath, inputSassDir, outputSassDir);
-
+  
   browserSync.watch(path.join(artboardPath, inputSassDir, '*.scss')).on('change', () => {
     buildSass(artboardPath, inputSassDir, outputSassDir);
+    browserSync.reload();
+  });
+
+  // watch JS
+  browserSync.watch(path.join(artboardPath, 'scripts', '*.js')).on('change', () => {
     browserSync.reload();
   });
 
