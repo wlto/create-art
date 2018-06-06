@@ -1,6 +1,8 @@
 # create-art
 A small scaffolding tool for ThreeJS projects
 
-**Project structure might be changed in the future**
+## Prerequisites
 
-- The `artboards` directory contains different HTML pages for different arts.
+1. `npm install` - Install necessary dependencies.
+2. `npm create-art-default [your-artboard-name]` - Creates a new artboard with the default template.
+3. `npm run art [your-artboard-name]` - Runs the artboard in a local server.
