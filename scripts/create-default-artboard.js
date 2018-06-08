@@ -18,7 +18,7 @@ if (typeof newArtName != 'string') {
       console.log('Injecting default template ........... 🐝');
       cp.exec(_copyTemplateFiles, (error, stdout, stderr) => {
         if (error) {
-          console.log(error);
+          console.error(error);
         } else {
           console.log(`New artboard generated under artboards/${newArtName} 🤟`);
         }

@@ -31,16 +31,20 @@ if (typeof artboardName != 'string') {
     browserSync.reload();
   });
 
+  // watch HTML
+  browserSync.watch(path.join(artboardPath, '*.html')).on('change', () => {
+    browserSync.reload();
+  });
+
   browserSync.init({
     server: artboardPath,
     serveStatic: [{
       route: ['/assets'],
-      dir: path.join(artboardPath, '..', 'includes')
+      dir: path.join(__dirname, '..', 'includes')
     }]
   });
 }
 
 function checkExistence(pathName) {
-  console.log(pathName);
   return fs.existsSync(pathName);
 }
