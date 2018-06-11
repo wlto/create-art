@@ -30,6 +30,9 @@ const art = (function () {
   }
 
   function render() {
+    // Demo ---
+    rotateBox();
+    // --------
     renderer.render(scene, camera);
     window.requestAnimationFrame(render);
   }
@@ -39,11 +42,12 @@ const art = (function () {
   }
 
   // Demo ---
+  let box;
   function addBox() {
     let boxGeometry = new THREE.BoxGeometry(20, 20, 20);
     let boxMaterial = new THREE.MeshLambertMaterial({ color: Math.random() * 0xffffff });
-    
-    let box = new THREE.Mesh(boxGeometry, boxMaterial);
+
+    box = new THREE.Mesh(boxGeometry, boxMaterial);
     scene.add(box);
   }
   // --------
@@ -58,4 +62,14 @@ const art = (function () {
 
     render();
   }
+
+  // //////////////////////////
+
+  // Demo ---
+  let speed = 0.01;
+  function rotateBox() {
+    speed += 0.0001;
+    box.rotation.y = Math.sin(speed) * THREE.Math.radToDeg(Math.PI * 2);
+  }
+  // --------
 })();
