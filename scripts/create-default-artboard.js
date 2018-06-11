@@ -3,7 +3,7 @@ const cp = require('child_process');
 
 const newArtName = process.argv[2];
 
-const _makeNewDir = `mkdir artboards/${newArtName} && mkdir artboards/${newArtName}/assets`;
+const _makeNewDir = `mkdir artboards/${newArtName} && mkdir artboards/${newArtName}/static`;
 const _copyTemplateFiles = `cp -r templates/default/* artboards/${newArtName}/`;
 
 if (typeof newArtName != 'string') {

@@ -17,7 +17,7 @@ if (typeof artboardName != 'string') {
 
   // watch SASS
   const inputSassDir = 'styles';
-  const outputSassDir = 'assets';
+  const outputSassDir = 'static';
   // build once
   buildSass(artboardPath, inputSassDir, outputSassDir);
   
